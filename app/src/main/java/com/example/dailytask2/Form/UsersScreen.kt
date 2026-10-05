@@ -52,5 +52,9 @@ class UsersScreen : AppCompatActivity() {
 
                 recyclerView.adapter = UserAdapter(userList)
             }
+            .addOnFailureListener { error ->
+
+                error.printStackTrace()
+            }
     }
 }
